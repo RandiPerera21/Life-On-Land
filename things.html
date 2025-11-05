@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to do</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('BgImages/ThingsToDo.jpg') no-repeat center center/cover; /* Updated background */
+    position: relative;
+}
+.Topic {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left, .right {
+    width: 50%;
+    opacity: 0.9;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+/* Action Elements */
+.action {
+    display: flex;
+    align-items: center;
+    background: #e8f5e9; /* Light Green Background */
+    padding: 15px 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    position: relative;
+    opacity: 0; /* Initially hidden */
+
+    /* New Animation */
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+/* Green Checkmark */
+.checkmark {
+    color: #28a745; /* Green Color */
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+/* New Animation: Slide in from the left and right */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Alternate effect for right side */
+.right .action {
+    animation: slideInRight 1s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Staggered Animation Delay */
+.action:nth-child(1) { animation-delay: 0.2s; }
+.action:nth-child(2) { animation-delay: 0.4s; }
+.action:nth-child(3) { animation-delay: 0.6s; }
+.action:nth-child(4) { animation-delay: 0.8s; }
+.action:nth-child(5) { animation-delay: 1s; }
+.action:nth-child(6) { animation-delay: 1.2s; }
+.action:nth-child(7) { animation-delay: 1.4s; }
+.action:nth-child(8) { animation-delay: 1.6s; }
+.action:nth-child(9) { animation-delay: 1.8s; }
+.action:nth-child(10) { animation-delay: 2s; }
+
+/* Subtle Hover Effect */
+.action:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+}
+/* Positioning the back button */
+.back-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+/* Styling the back button */
+.back-arrow a {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: green;
+    background: linear-gradient(135deg, #b4c8b6, #6a916d);
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling the arrow */
+.back-arrow .arrow {
+    font-size: 22px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+/* Moving the arrow on hover */
+.back-arrow a:hover .arrow {
+    transform: translateX(-5px);
+}
+
+
+
+</style>   
+</head>
+
+<body>
+    <div class="Topic">
+        "Conserve Today, Sustain Tomorrow – Land Free from Sorrow!"
+    </div>
+
+
+<div class="container">
+    <!-- Left Side -->
+    <div class="left">
+        <div class="action"><span class="checkmark">✅</span> Plant trees in your community or participate in tree-planting drives.</div>
+        <div class="action"><span class="checkmark">✅</span> Avoid overgrazing and adopt sustainable farming practices like crop rotation and agroforestry.</div>
+        <div class="action"><span class="checkmark">✅</span> Carry reusable bags, bottles, and containers.</div>
+        <div class="action"><span class="checkmark">✅</span> Recycle, compost, and reduce single-use plastics to prevent land pollution.</div>
+        <div class="action"><span class="checkmark">✅</span> Share information about the importance of life on land with your community.</div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="right">
+        <div class="action"><span class="checkmark">✅</span> Volunteer with organizations working on land conservation and restoration.</div>
+        <div class="action"><span class="checkmark">✅</span> Choose eco-friendly products and support sustainable brands.</div>
+        <div class="action"><span class="checkmark">✅</span> Turn off lights, unplug devices, and use energy-efficient appliances.</div>
+        <div class="action"><span class="checkmark">✅</span> Practice water conservation techniques like drip irrigation and rainwater harvesting.</div>
+        <div class="action"><span class="checkmark">✅</span> Walk, bike, or use public transport to reduce emissions.</div>
+    </div>
+</div>
+<div class="back-arrow">
+    <a href="Home.html">
+    <span class="arrow">&#8592;</span>Home
+</a>
+</div>
+
+    
+</body>
+</html>

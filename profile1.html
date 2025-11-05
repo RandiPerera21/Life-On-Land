@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="profile1.css">
+        <title>User Profile</title>
+        <link rel="stylesheet" href="global.css">
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <img src="Logo.png" alt="Logo" class="navbar-logo"> <!-- Logo image -->
+            <a href="Home.html">Home</a>
+            <a href="volunteer">Volunteer</a>
+            <a href="Table.html">Table</a>
+            <a href="profile.html">User Profile</a>
+            <a href="Feedback.html">Feedback</a>
+            <a href="sitemap.html">Sitemap</a>
+            <a href="aboutus.html">About Us</a>
+            <span></span>
+        </nav>    
+
+        <div class="container">
+            <div class="main">
+                <div class="vertical_left_section">
+
+                    <br><legend><h1><span style="color: #14d41d;">User Profile</span></h1></legend> <br><br>
+
+                    <div class="profile-container">
+                        <div class="profile-picture" id="profile-picture">
+            
+                            <img src="profile1.jpg" alt="User Avatar" id="avatar" class="avatar">
+                            <input type="file" id="file-input" accept="image/*">
+                
+                            <div class="upload-hover">Click to Upload</div>
+                        </div>
+                    </div>
+
+                    <br> <div class="main-user-details">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required>
+                        
+                        <label for="profession">Profession</label>
+                        <input type="text" id="profession" name="profession" required>
+                    </div><br>
+
+                    <hr>
+                    
+                    <br> <div class="progress-bar-section">
+                        <label for="progress-bars">Progress</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar">
+                                <div class="progress" id="skills-progress"></div>
+                                <span class="progress-label">Skills</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="goals-progress"></div>
+                                <span class="progress-label">Goals</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" id="experience-progress"></div>
+                                <span class="progress-label">Experience</span>
+                            </div>
+                        </div>
+                    </div><br><br>
+
+                    <hr>
+
+                    <br><br><br> <label for="availability">Availability</label>
+                    <table id="availability-table">
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Available</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monday</td>
+                                <td><input type="checkbox" name="availability" value="Monday"></td>
+                            </tr>
+                            <tr>
+                                <td>Tuesday</td>
+                                <td><input type="checkbox" name="availability" value="Tuesday"></td>
+                            </tr>
+                            <tr>
+                                <td>Wednesday</td>
+                                <td><input type="checkbox" name="availability" value="Wednesday"></td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td><input type="checkbox" name="availability" value="Thursday"></td>
+                            </tr>
+                            <tr>
+                                <td>Friday</td>
+                                <td><input type="checkbox" name="availability" value="Friday"></td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td><input type="checkbox" name="availability" value="Saturday"></td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td><input type="checkbox" name="availability" value="Sunday"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="vertical_right_section">
+
+                    <form id="profile-form">
+
+                    <!--Personal Details-->
+                    
+                    <fieldset class="steps" id="step1">
+                        <legend><h3>Step 1 | About</h3></legend>
+
+                        <div class="name-row">
+                            <div class="name-item">
+                                <label for="first-name">First name:</label>
+                                <input type="text" id="first-name" name="first-name" required style="width: 100%;">
+                            </div>
+
+                            <div class="name-item">
+                                <label for="last-name">Last name:</label>
+                                <input type="text" id="last-name" name="last-name" required style="width: 100%;">
+                            </div>
+                        </div>
+                        
+                        <hr>
+
+                        <label for="gender">Gender:</label> <br>
+
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" name="gender" value="Male">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="other">Prefer not to say</label>
+                        <input type="radio" id="other" name="gender" value="Other">
+
+                        <hr>
+
+                        <div class="country-container">
+                            <label for="country">Country/Location:</label>
+                            <input type="text" id="country" name="country" required>
+                        </div>
+
+                        <hr>
+
+                        <label for="bio">About Me:</label> <br>
+                        <textarea rows="8" name="bio" placeholder="Please provide a brief introduction about yourself (your purpose, personality, or background)."></textarea>
+
+                    </fieldset>
+
+                    <hr>
+
+                    <!--Skills & Goals-->
+
+                    <fieldset class="steps" id="step2">
+                        <legend><h3>Step 2 | Skills &amp; Goals</h3></legend>
+
+                        <label for="skills" required>What skills do you bring to &apos;Life on Land&apos; initiatives?</label> <br>
+
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="wildlife-tracking" name="skills" value="Wildlife Tracking">
+                                <label for="wildlife-tracking">Wildlife Tracking</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="plant-identification" name="skills" value="Plant Identification">
+                                <label for="plant-identification">Plant Identification</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="data-analysis" name="skills" value="Data Analysis">
+                                <label for="data-analysis">Data Analysis</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="environmental_edu" name="skills" value="Environmental education">
+                                <label for="environmental_edu">Environmental education</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="fundraising" name="skills" value="Fundraising">
+                                <label for="fundraising">Fundraising</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="community-outreach" name="skills" value="Community Outreach">
+                                <label for="community-outreach">Community Outreach</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="photography" name="skills" value="Photography">
+                                <label for="photography">Photography</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="videography" name="skills" value="Videography">
+                                <label for="videography">Videography</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="social-media-marketing" name="skills" value="Social Media Marketing">
+                                <label for="social-media-marketing">Social Media Marketing</label>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <label for="goals">What are your specific goals related to &apos;Life on Land&apos; conservation?</label> <br>
+                        <div class="goal-row">
+                            <label>1.</label> <input type="text" id="goal1" name="goals" required> <br>
+                        </div>
+                        <div class="goal-row">
+                            <label>2.</label> <input type="text" id="goal2" name="goals"> <br>
+                        </div>
+                        <div class="goal-row">
+                            <label>3.</label> <input type="text" id="goal3" name="goals"> <br>
+                        </div>
+                        <div class="goal-row">
+                            <label>4.</label> <input type="text" id="goal4" name="goals"> <br>
+                        </div>
+
+                        <hr>
+
+                        <label for="experience">Experience:</label> <br>
+                        <textarea rows="8" name="experience" placeholder="Describe your relevant experience in conservation or environmental work. (Include any past volunteering, projects, or professional work)"></textarea>
+
+                    </fieldset>
+
+                    <hr>
+
+                    <!--Community & Interests-->
+
+                    <fieldset class="steps" id="step3">
+                        <legend><h3>Step 3 | Community &amp; Interest</h3></legend>
+
+                        <label for="skills" required>What organizations or initiatives are you involved with that support &apos;Life on Land&apos;?</label> <br>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="wildlife-rescue" name="organizations-involved" value="Local Wildlife Rescue">
+                                <label for="wildlife-rescue">Local Wildlife Rescue</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="national-park-volunteer" name="organizations-involved" value="National park volunteer">
+                                <label for="national-park-volunteer">National park volunteer</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tree-planting-camp" name="organizations-involved" value="Tree-planting Campaigns">
+                                <label for="tree-planting-camp">Tree-planting Campaigns</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="beach-cleanup" name="organizations-involved" value="Beach cleanup groups">
+                                <label for="beach-cleanup">Beach cleanup groups</label>
+                            </li>
+                            <li>
+                                <div class="other-container">
+                                    <input type="checkbox" id="other" name="other" value="Other">
+                                    <label for="other">Other</label>
+                                    <input type="text" id="other" name="other">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <hr>
+
+                        <label for="interests">What specific aspects of &apos;Life on Land&apos; are you most passionate about? <i>Ex:- Forest conservation, Wildlife protection, Pollinator perservation, Sustainable agriculture, Ecosystem restoration</i></label> <br>
+                        <div class="interest-row">
+                            <label>1.</label> <input type="text" id="interest1" name="interests" required> <br>
+                        </div>
+                        <div class="interest-row">
+                            <label>2.</label> <input type="text" id="interest2" name="interests"> <br>
+                        </div>
+                        <div class="interest-row">
+                            <label>3.</label> <input type="text" id="interest3" name="interests"> <br>
+                        </div>
+                        <div class="interest-row">
+                            <label>4.</label> <input type="text" id="interest4" name="interests"> <br>
+                        </div>
+
+                    </fieldset>
+
+                    <hr>
+
+                    <!--Connect-->
+
+                    <fieldset class="steps" id="step4">
+                        <legend><h3>Step 4 | Connect</h3></legend>
+
+                        <div class="email-container">
+                            <label for="email">Email:</label> <br>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required> <br>
+                        </div>
+
+                        <div class="contact-row">
+                            <div class="contact-item">
+                                <label for="phone">Phone Number:</label> <br>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8901" required> <br>
+                            </div>
+
+                            <div class="contact-item">
+                                <label for="whatsapp">Whatsapp:</label> <br>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 234 567 8901" required> <br>
+                            </div>
+                        </div>
+
+                        <div class="linkedin-container">
+                            <label for="linkedin">LinkedIn:</label> <br>
+                            <input type="url" id="linkedin" name="linkedin" placeholder="LinkedIn URL" required> <br>
+                        </div>
+
+                        <hr>
+
+                        <div class="prefered-contact-container">
+                            <label for="prefered_contact_method">Preferred Contact Method:</label>
+                                <select id="prefered_contact_method" name="prefered_contact_method" required>
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="email">Email</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="whatsapp">Whatsapp</option>  <!--ask for the phone number (international mode)-->
+                                    <option value="linkedin">LinkedIn</option>  <!--ask for the linkedin profile link-->
+                                </select> <br>
+                        </div>
+
+                        <hr>
+
+                        <label for="inquiry">Message/Inquiry:</label> <br>
+                        <textarea rows="10" name="inquiry" placeholder="Please leave a message or inquiry."></textarea>
+
+                    </fieldset>
+
+                    <div class="button-container">
+                        <button type="reset" id="reset-button">Reset</button>
+                        <button type="button" id="save-button">Save</button>
+                    </div>
+
+                    </form>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const form = document.getElementById('profile-form');
+                            const saveButton = document.getElementById('save-button');
+                            const resetButton = document.getElementById('reset-button');
+                    
+                            // Function to save form data to local storage
+                            function saveFormData() {
+                                const formData = new FormData(form);
+                                const data = {};
+                                formData.forEach((value, key) => {
+                                    data[key] = value;
+                                });
+                                
+                                // Save availability
+                                const availability = [];
+                                document.querySelectorAll('#availability-table input[type="checkbox"]:checked').forEach(checkbox => {
+                                    availability.push(checkbox.value);
+                                });
+                                data['availability'] = JSON.stringify(availability);
+                                
+                                localStorage.setItem('profileFormData', JSON.stringify(data));
+                                alert("Information Saved!"); //Alert the user for information saved
+                            }
+                    
+                            // Function to load form data from local storage
+                            function loadFormData() {
+                                const savedData = localStorage.getItem('profileFormData');
+                                if (savedData) {
+                                    const data = JSON.parse(savedData);
+                                    for (const key in data) {
+                                        const element = form.elements[key];
+                                        if (element) {
+                                            if (element.type === 'radio' || element.type === 'checkbox') {
+                                                element.checked = (element.value === data[key]);
+                                            } else {
+                                                element.value = data[key];
+                                            }
+                                        }
+                                    }
+
+                                    // Load availability
+                                    if (data['availability']) {
+                                        const availability = JSON.parse(data['availability']);
+                                        availability.forEach(day => {
+                                            const checkbox = document.querySelector(`#availability-table input[value="${day}"]`);
+                                            if (checkbox) {
+                                                checkbox.checked = true;
+                                            }
+                                        });
+                                    }
+                                }
+                            }
+
+                            // Function to reset form and clear local storage
+                            function resetForm() {
+                                form.reset(); // Reset the form
+                                localStorage.removeItem('profileFormData'); // Clear local storage
+
+                                // Reset availability checkboxes
+                                document.querySelectorAll('#availability-table input[type="checkbox"]').forEach(checkbox => {
+                                    checkbox.checked = false;
+                                });
+
+                                alert("Information Reset!"); // Alert the user for reset
+                            }
+
+                            // Function to update progress bars
+                            function updateProgressBars() {
+                                // skills progress bar
+                                const skillsProgress = document.getElementById('skills-progress');
+                                const skillsCheckboxes = document.querySelectorAll('#step2 input[name="skills"]:checked');
+                                const skillsTotal = document.querySelectorAll('#step2 input[name="skills"]').length;
+
+                                if (skillsTotal > 0) {
+                                    skillsProgress.style.width = (skillsCheckboxes.length / skillsTotal * 100) + '%';
+                                } else {
+                                    skillsProgress.style.width = '0%';
+                                }
+
+                                // goals progress bar
+                                const goalsProgress = document.getElementById('goals-progress');
+                                let filledGoals = 0;
+                                for (let i = 1; i <= 4; i++) {
+                                    if (document.getElementById(`goal${i}`).value.trim() !== "") {
+                                        filledGoals++;
+                                    }
+                                }
+                                goalsProgress.style.width = (filledGoals / 4 * 100) + '%';
+
+                                // experience progress bar
+                                const experienceProgress = document.getElementById('experience-progress');
+                                const experienceTextarea = document.querySelector('#step2 textarea[name="experience"]');
+                                experienceProgress.style.width = experienceTextarea.value.trim() !== '' ? '100%' : '0%';
+                            }
+                    
+                            // Load saved data on page load
+                            loadFormData();
+                            // Update progress bars on page load and form changes
+                            updateProgressBars();
+                            form.addEventListener('change', updateProgressBars);
+                    
+                            // Save data when the save button is clicked
+                            saveButton.addEventListener('click', saveFormData);
+
+                            // Reset data when the reset button is clicked
+                            resetButton.addEventListener('click', resetForm);
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="Team">
+            <ul>
+                <li><a href="page editor 1.html">Randi Perera</a></li>
+                <li><a href="page editor 2.html">Thamadi De Silva</a></li>
+                <li><a href="pageeditor3.html">Supuni Jayarathne</a></li>
+                <li><a href="dulesini.html">Dulesini Jayathilaka</a></li>
+            </ul>
+        </div>
+
+    </body>
+</html>

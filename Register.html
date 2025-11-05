@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration</title>
+      
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-image: url('BgImages/registerBg.jpg'); 
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents image repetition */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0; /* Removes default margin */
+    }
+
+    .form-container {
+        background: white;
+        padding: 50px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+    }
+
+    .form-container h2 {
+        font-family: cursive;
+        font-size: x-large;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #28a745;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+        border: none;
+        background: #28a745;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #218838;
+    }
+
+    #thank-you-message {
+        display: none; /* Initially hidden */
+        text-align: center;
+        color: rgba(40, 167, 69, 0.8);
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #d4edda; /* Light green background */
+        border: 1px solid #28a745; /* Green border to match theme */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px; /* Limits width of the message */
+        margin: 20px auto;
+    }
+
+    /* Positioning the back button */
+    .back-arrow {
+        position: absolute;
+        bottom: 20px; /* Corrected position */
+        left: 20px;
+    }
+
+    /* Styling the back button */
+    .back-arrow a {
+        display: flex;
+        align-items: center;
+        padding: 12px 18px;
+        font-size: 18px;
+        font-weight: bold;
+        color: green;
+        background: linear-gradient(135deg, #b4c8b6, #6a916d);
+        border-radius: 25px;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Styling the arrow */
+    .back-arrow .arrow {
+        font-size: 22px;
+        margin-right: 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Moving the arrow on hover */
+    .back-arrow a:hover .arrow {
+        transform: translateX(-5px);
+    }
+</style>
+</head>
+
+<body>
+ 
+    <div class="form-container">
+        <h2><b>Volunteer Registration</b></h2>
+        <hr>
+
+        <form action="#" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="current-role">Current Role:</label>
+            <select id="current-role" name="current-role">
+                <option value="student">Student</option>
+                <option value="working-professional">Working Professional</option>
+                <option value="retired">Retired</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="homemaker">Homemaker</option>
+                <option value="other">Other</option>
+            </select>
+            <small style="display: block; color: gray; margin-top: 5px;">
+                Please select your current role to help us understand your background for better role assignment.
+            </small>            
+
+            <label for="volunteer-role">Volunteer Role:</label>
+            <select id="volunteer-role" name="volunteer-role">
+                <option value="Tree Planting & Reforestation">Tree Planting</option>
+                <option value="Wildlife Protection">Wildlife Protection</option>
+                <option value="Sustainable Farming">Sustainable Farming</option>
+                <option value="Fighting Land Degradation">Fighting Land Degradation</option>
+                <option value="Urban Green Spaces">Urban Green Spaces</option>
+                <option value="Volunteer with Street Animal Organizations or Shelters">Volunteer with Street Animal Organizations or Shelters</option>
+                <option value="Beach Cleaning & Ocean Conservation">Beach Cleaning & Ocean Conservation</option>
+                <option value="The Nature Conservancy">The Nature Conservancy</option>
+            </select>
+            <small style="display: block; color: gray; margin-top: 5px;">
+                Please choose a volunteer role that best matches your skills and interests.
+            </small>
+            
+            <label for="availability">Availability:</label>
+            <textarea id="availability" name="availability" rows="3" placeholder="E.g., Weekends, Weekdays after 5 PM"></textarea>
+            
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <div id="thank-you-message" >
+       <p> Thank you for registering as a volunteer! <br>
+        We appreciate your support.</p>
+    </div>
+    
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.querySelector(".form-container").innerHTML = `
+                <h2> <font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;> 
+                    Registration Successful!</h2>
+                <p style="text-align: center; color: black; font-size: 18px; font-family: cursive; ">
+                    Thank you for registering as a volunteer!<br>
+                    We appreciate your support.
+                </p>
+            `;
+        });
+    </script>
+
+    <div class="back-arrow">
+        <a href="Volunteer.html">
+        <span class="arrow">&#8592;</span>Back
+        </a>
+    </div>
+
+</body>
+</html>
