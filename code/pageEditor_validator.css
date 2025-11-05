@@ -1,0 +1,256 @@
+
+
+ nav {
+     position: fixed;
+     display: flex;
+     justify-content: flex-end; /* Align the navbar items to the right */
+     align-items: center; /* Align items vertically */
+     padding: 10px 20px;
+     top: 0;
+     left: 0; /* Ensure it's aligned to the top-left */
+     width: 100%; /* Full width of the page */
+     height: 100px;
+     background: rgba(40, 167, 69, 0.8);
+     border-radius: 8px;
+     box-sizing: border-box; /* Ensures padding is inside the width */
+     backdrop-filter: blur(3px); /* Adds a slight blur effect */
+     z-index: 1500; /* Keep navbar above content */
+ }
+ /* Ensure the navbar stays at the top */
+.navbar {
+    position: relative;
+    z-index: 10; /* Ensures navbar stays on top */
+}
+
+/* Add space below the navbar to separate it from the section */
+.stud {
+    margin-top: 20px; /* Adjust this value as needed */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    background-color:  rgba(40, 167, 69, 0.8); /* Optional: add background color */
+}
+
+ 
+ nav a {
+     position: relative;
+     display: inline-block;
+     font-size: 1.5em;  /* Increase the font size to make navbar topics larger */
+     font-weight: 700;
+     color: rgb(254, 252, 252);
+     text-decoration: none;
+     padding: 10px 23px;
+     border: 2px solid transparent; /* Add border for the square effect */
+     border-radius: 8px; /* Rounded corners for the small square */
+     font-family: 'Arial', sans-serif; /* New font style */
+     transition: border-color 0.3s ease; /* Smooth transition for border */
+ }
+ 
+ nav a:hover {
+     border-color: white; /* Change border color when hovered */
+ }
+ 
+ nav span {
+     position: absolute;
+     bottom: -5px;
+     left: 0;
+     width: 0; /* Initially width is 0 */
+     height: 3px;
+     background: white;
+     border-radius: 8px;
+     transition: left 0.3s ease, width 0.3s ease;
+ }
+ 
+ nav::before {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 3px;
+     background-color: #28a745;
+     border-radius: 8px 8px 0 0;
+ }
+ 
+ /* Styling for the logo */
+ .navbar-logo {
+     position: absolute; /* Positions the logo relative to the nearest positioned ancestor (body in this case) */
+     top: 0; /* Aligns the logo to the top of the page */
+     left: 0; /* Aligns the logo to the left of the page */
+     height: 100px; /* Increased the size of the logo */
+     width: auto; /* Keeps the logo's aspect ratio */
+ }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+main {
+    flex: 3;
+}
+aside {
+    flex: 1;
+    background-color: #77c48e;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #77c48e;
+}
+header, footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.ref li{
+    list-style: none;
+    padding-bottom: 9px;
+}
+
+aside a{
+    text-decoration : none;
+}
+
+aside li{
+    padding-bottom: 4px;
+}
+
+.stud {
+    text-align: center;
+    line-height: 0;
+    background-color: #77c48e;
+    color: white;
+    margin-top: 8px;
+}
+
+.top {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+        
+.top a {
+    padding: 10px 20px; /* Adds padding for button-like feel */
+    background-color: #0f5a35; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 20px; /* Rounds the corners */
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+    background-color: #0f5a35; /* Darker shade on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+img{
+    width: 90%;
+}
+/* Team Section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.member {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #f3f2f2e5;
+}
+
+.member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+}
+
+.member-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(243, 241, 241, 0.986);
+}
+
+.member-info {
+    margin-top: 15px;
+}
+
+.member-info a {
+    color: rgb(47, 228, 11); 
+    text-decoration: none; /* Optional: removes underline */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.member-info a:hover {
+    color: rgb(245, 247, 245);
+}
+
+.member-info p {
+    font-size: 16px;
+    color: rgb(247, 247, 247); 
+
+
+}
+
+.Team {
+    width: 105%;
+    margin-top: 100px;
+    margin-bottom:  0px;  /* Place it at the bottom of the page */
+    margin-left: -30px;
+    padding: 25px 35px;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    border-radius: 15px; /* Optional: rounds the corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow effect */
+  }
+  
+  .Team ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between; /* Distributes items from left to right */
+    align-items: center;
+    width: 90%;
+  }
+  
+  .Team li {
+    display: inline-block;
+  }
+  
+  .Team a {
+    color: white; /* Set text color to white for contrast */
+    text-decoration: none;
+    padding: 7px;
+    transition: background 0.3s ease;
+  }
+  
+  .Team a:hover {
+    background: #517e55; /* Change background color on hover */
+    border-radius: 30px;
+  }

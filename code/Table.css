@@ -1,0 +1,153 @@
+/* Set background image for the entire page */
+body {
+    background-image: url('BgImages/tablebg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjusts positioning so it aligns properly */
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+
+.topic {
+    margin-left: 540px;
+    margin-top: 6%;
+    color: azure;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline animation */
+.topic::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust position */
+    width: 0;
+    height: 3px;
+    background-color: white; /* Change color if needed */
+    transition: width 0.6s ease-in-out;
+}
+
+/* Animation on page load */
+@keyframes underlineEffect {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.topic::after {
+    animation: underlineEffect 0.8s forwards;
+}
+
+/* General Table Styling */
+table {
+    width: 60%;
+    margin-left: 300px;
+    margin-top: 45px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgba(76, 175, 80, 0.95);
+    table-layout: fixed;
+    border-collapse: collapse; /* Prevents gaps between cells */
+    position: relative;
+    z-index: 1;
+
+}
+
+/* Table Header and Cell Borders */
+th, td {
+    border: 2px solid white; /* Add black border for each cell */
+    padding: 15px;
+    font-family: inherit;
+    text-align: center;
+}
+
+/* Table Header Styling */
+th {
+    background-color: #388E3C;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Logo Image in Header */
+th img.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 2;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Link Styling in "More Information" */
+a {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Row Styling */
+tr:nth-child(odd) {
+    background-color: #d1fdc9;
+}
+
+tr:nth-child(even) {
+    background-color: #bafbae;
+}
+
+tr:hover {
+    background-color: #c8f7b9;
+}
+
+/* Styling for "More Information" Row with rowspan */
+td[rowspan="2"] {
+    background-color: #e8f5e9;
+    font-weight: bold;
+}
+
+/* Ensure the table is above the background */
+table, th, td {
+    position: relative;
+    z-index: 2;
+}
+
+
+

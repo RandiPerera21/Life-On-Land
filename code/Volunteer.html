@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Life on Land Volunteering</title>
+  
+  <!-- Google Fonts: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style>
+   
+    body {
+      font-family: 'Roboto', sans-serif;
+      /* Apply one background image for the entire website */
+      background: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    .container {
+      background: none;
+      position: relative;
+    }
+    /* Background overlay */
+    .background-overlay {
+      position: absolute;
+      inset: 0;
+  
+    }
+
+    
+
+    
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      padding: 50px;
+    }
+
+    /* Volunteer Info Section */
+    .container1 {
+      max-width: 600px;
+      margin-left: 60px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    
+    /* Campaign Section */
+    .container {
+      width: 95%;
+      max-width: 1700px;
+      margin: 50px auto;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .container h2 {
+      color: #ebf3f0;
+      font-weight: bold;
+      font-size: 3.5em;
+      margin-bottom: 10px;
+    }
+
+    .container p.subtitle {
+      color: #e6cdcd;
+      font-size: 2em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .campaign-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    /* card styles */
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /*  content is evenly spaced */
+      align-items: center;
+      height: 100%; /*  equal card height */
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .card h3 {
+      color: #047857;
+      font-size: 1.8em;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    
+
+    .card p {
+      color: #171616;
+      font-size: 1.3em;
+      margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* button is always at the bottom */
+    .donate-btn {
+      width: 50%;
+      padding: 10px 20px;
+      background-color: #047857;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.5em;
+      transition: background-color 0.3s;
+      margin-top: auto; /* Pushes button to bottom */
+    }
+
+    .donate-btn:hover {
+      background-color: #058868;
+    }
+
+    /* Donation popup styles */
+    .donation-details {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 200px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .donation-details p {
+      font-weight: bold;
+      color: #171818;
+      font-size: 2.3em;
+    }
+
+    /* Blur background overlay */
+    .blur-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 999;
+    }
+
+    /* Show donation popup */
+    .show-donation .blur-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .show-donation .donation-details {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+
+     
+
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <img src="Logo.png" alt="Logo" class="navbar-logo"> <!-- Logo image -->
+    <a href="Home.html">Home</a>
+    <a href="Volunteer.html">Volunteer</a>
+    <a href="Table.html">Table</a>
+    <a href="profile1.html">User Profile</a>
+    <a href="Feedback.html">Feedback</a>
+    <a href="sitemap.html">Sitemap</a>
+    <a href="aboutus.html">About Us</a>
+    <span></span>
+</nav>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- HERO SECTION -->
+  <main class="p-8">
+    <section class="background1-section flex items-center justify-center" style="height: 90vh;">
+      <div class="background-overlay"></div>
+      <div class="content">
+        <div class="text-7xl font-bold mb-4">
+          Do Something Great<br>To Help Others
+        </div>
+        <p class="text-3xl mb-6">
+          Life on Land Volunteering is a platform to support<br>various programs that help people and animals in need.
+        </p>
+        <br>
+        <button class="bg-green-600 text-white text-3xl font-bold py-8 px-10 rounded mr-4" onclick="showDonationDetails(event)">
+          Donate Now
+        </button>
+        <button class="bg-white border border-green-600 text-green-600 text-3xl font-bold py-8 px-10 rounded">
+          <a href="https://www.youtube.com/watch?v=tYmvsrkN8po" target="_blank">▶Watch Video</a>
+        </button>
+        <br><br>
+        <div class="flex mt-6 space-x-8 justify-center">
+          <div class="text-center">
+            <p class="text-4xl font-bold">15K</p>
+            <p class="text-2xl">Incredible Volunteers</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-bold">100+</p>
+            <p class="text-2xl">Successful Campaigns</p>
+          </div>
+          <div class="text-center">
+            <p class="text-4xl font-bold">600+</p>
+            <p class="text-2xl">Monthly Donors</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- VOLUNTEER INFORMATION SECTION -->
+  <section class="flex flex-col lg:flex-row items-center bg-white p-8 rounded-lg shadow-md">
+    <style>
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 600px;
+      }
+      .image-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+    </style>
+    <div class="image-grid">
+      <img src="VolunteerImg/image1.jpg" class="w-20 h-22 object-cover rounded-lg" alt="Volunteer 1">
+      <img src="VolunteerImg/image2.jpg" class="w-24 h-24 object-cover rounded-lg" alt="Volunteer 2">
+      <img src="VolunteerImg/image3.jpg" class="w-20 h-22 object-cover rounded-lg" alt="Volunteer 3">
+      <img src="VolunteerImg/image4.jpg" class="w-24 h-24 object-cover rounded-lg" alt="Volunteer 4">
+    </div>
+    <div class="container1">
+      <h1 style="font-size: 2.8em; color: #066b10; margin-bottom: 10px;">Helping People In Need Around The World</h1>
+      <p class="description" style="font-size: 1.8em; color: #555; margin-bottom: 30px;">We help provide necessities to help people in need around the world.</p>
+      <div class="info-box">
+        <div class="info" style="display: flex; align-items: center; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 15px;">
+         
+          <div class="text">
+            <h2 style="font-size: 2em; color: #0c0101; margin: 0; text-align: left;">💖Donate</h2>
+            <p style="font-size: 1.6em; color: #555; margin: 5px 0 0;">Providing assistance in the form of money and clothing to help others.</p>
+          </div>
+        </div>
+        <div class="info" style="display: flex; align-items: center; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+          
+          <div class="text">
+            <h2 style="font-size: 2em; color: #0c0101; margin: 0; text-align: left;">🤝Volunteer</h2>
+            <p style="font-size: 1.6em; color: #555; margin: 5px 0 0;">Providing assistance in the form of time, skills, and knowledge to help others.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+  
+
+  <!-- CAMPAIGN SECTION -->
+  <div class="blur-overlay"></div>
+  <section class="container">
+    <h2>Introduce Our Campaign</h2>
+    <p class="subtitle">"No One Has Ever Become Poor By Giving." – Anne Frank</p>
+    <div class="campaign-cards">
+      <div class="card">
+        <h3>Tree Planting & Reforestation</h3>
+        <p>Join tree-planting drives to restore forests and protect biodiversity.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Wildlife Protection</h3> 
+        <p>Volunteer in animal rescue centers or wildlife sanctuaries to help endangered species.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Sustainable Farming</h3> 
+        <p>Assist farmers in using eco-friendly methods for growing food.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Fighting Land Degradation</h3> 
+        <p>Support efforts to stop desertification and restore damaged lands.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Urban Green Spaces</h3>  
+        <p>Help create parks,<br> gardens, and rooftop<br>greenery in cities.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Volunteer with Street Animal Organizations or Shelters</h3>  
+        <p>Help provide food, medical care, and shelter for homeless animals and protect endangered species.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>Beach Cleaning & Ocean Conservation</h3>  
+        <p>Join clean-up drives to remove plastic waste and protect marine life.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+      <div class="card">
+        <h3>The Nature Conservancy</h3>  
+        <p>Participate in conservation projects to protect land, water, and wildlife.</p>
+        <button class="donate-btn" onclick="showDonationDetails(event)">Donate</button>
+      </div>
+    </div>
+    <div id="donation-details" class="donation-details">
+      <p>You can donate via bank transfer, online payment, or by contacting us at dgsvvdcsdvggd@vgvgg.</p>
+      <p>Bank Account: 123456789</p>
+      <p>Bank Name: ABC Bank</p>
+      <p>Thank you for your generosity!</p>
+      <button class="donate-btn" onclick="hideDonationDetails()">Close</button>
+    </div>
+  </section>
+
+  
+
+  <!-- PARTICIPATE IN CHARITY SECTION -->
+  <main class="p-8">
+    <section class="background-section flex items-center justify-center" style="height: 90vh;">
+      <div class="background-overlay"></div>
+      <div class="content">
+        <div class="text-6xl font-bold mb-4">
+          Participate In Charity Around The Whole World
+        </div>
+        <p class="text-3xl mb-6">
+          Join our community to volunteer and<br>help people in need around the world.
+        </p>
+        <br>
+        <a href="Register.html"
+           target="_blank" class="bg-green-700 text-3xl font-bold text-white  py-8 px-10 rounded">
+          Become Volunteer
+        </a>
+      </div>
+    </section>
+    <section class="feedback-section">
+      <h3>Give Your Feedback</h3>
+      <textarea placeholder="Share your experience or suggestions..."></textarea><br>
+      <button onclick="showThankYouMessage()">Submit Feedback</button>
+      <div id="thank-you-message" style="display: none; color: rgb(7, 43, 7); margin-top: 20px;">Thank you for your feedback!</div>
+  </section>
+
+  <section class="volunteer-page">
+    <h2>Volunteer With Us</h2>
+    <p>Join us in making a difference! Read what others have shared about their experience volunteering with us.</p>
+
+    <!-- Reviews Section with Blurred Background -->
+    <div class="reviews-background">
+        <h3>Reviews</h3>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>Jane Doe</strong>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+                <p>It was an amazing experience! I learned a lot and met wonderful people.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>John Smith</strong>
+                    <div class="rating">
+                        ★★★☆☆
+                    </div>
+                </div>
+                <p>Great organization! The team is welcoming, and the work we did was impactful.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>Mary Johnson</strong>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <p>Volunteering here was a life-changing experience. The team made me feel like part of the family.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>Emma Williams</strong>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+                <p>Wonderful experience! The work we did was meaningful, and I enjoyed every moment.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>Lucas Brown</strong>
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+                </div>
+                <p>The team was incredibly supportive, and I had an unforgettable experience volunteering here.</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <strong>Sophia Davis</strong>
+                    <div class="rating">
+                        ★★★★☆
+                    </div>
+                </div>
+                <p>I had the chance to grow both personally and professionally while volunteering. Highly recommend!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .volunteer-page {
+        text-align: center;
+        padding: 40px;
+        background: #f8f8f8;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .volunteer-page h2 {
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-weight: bold;
+        color: #066b10;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    .volunteer-page p {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+    }
+
+    /* Blurred background for the review section */
+    .reviews-background h3 {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(10px); 
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 2em;
+        font-weight: bold;
+        color: #171616;
+    }
+
+    .reviews-container {
+        display: flex;
+        overflow-x: scroll;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.7); /* Slight transparency to allow background blur effect */
+        border-radius: 10px;
+    }
+
+    .review-card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px; /* Space between name and rating */
+    }
+
+    .review-header strong {
+        font-size: 1.1em;
+        color: #333;
+    }
+
+    .rating {
+        color: #ffcc00;
+        font-size: 1.2em;
+    }
+
+    .review-card p {
+        font-size: 1em;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    .reviews-container::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .reviews-container::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+    }
+
+    .reviews-container::-webkit-scrollbar-track {
+        background-color: #f0f0f0;
+    }
+</style>
+
+  
+  <style>
+      .feedback-section {
+          text-align: center;
+          padding: 40px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin: 20px;
+          font-size: 1.5em;
+          font-family: Arial, Helvetica, sans-serif;
+        
+      }
+      .feedback-section textarea {
+          width: 80%;
+          height: 100px;
+          padding: 10px;
+          margin-top: 10px;
+          border-radius: 5px;
+          border: 1px solid #228B22;
+      }
+      .feedback-section button {
+          background: #228B22;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          margin-top: 10px;
+          cursor: pointer;
+      }
+      .feedback-section button:hover {
+          background: #084a0d;
+      }
+  </style>
+  
+  <script>
+      function showThankYouMessage() {
+          document.getElementById('thank-you-message').style.display = 'block';
+      }
+  </script>
+  
+  </main>
+
+  <div class="Team">
+    <ul>
+        <li><a href="page editor 1.html">Randi Perera</a></li>
+        <li><a href="page editor 2.html">Thamadi De Silva</a></li>
+        <li><a href="pageeditor3.html">Supuni Jayarathne</a></li>
+        <li><a href="page editor 4.html">Dulesini Jayathilaka</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function showDonationDetails(event) {
+      event.stopPropagation();
+      document.body.classList.add("show-donation");
+      document.getElementById('donation-details').style.opacity = '1';
+      document.getElementById('donation-details').style.visibility = 'visible';
+    }
+    function hideDonationDetails() {
+      document.body.classList.remove("show-donation");
+      document.getElementById('donation-details').style.opacity = '0';
+      document.getElementById('donation-details').style.visibility = 'hidden';
+    }
+    window.onclick = function(event) {
+      if (!event.target.closest('.donation-details') && !event.target.closest('.donate-btn')) {
+        hideDonationDetails();
+      }
+    }
+  </script>
+  
+
+  
+</body>
+</html>

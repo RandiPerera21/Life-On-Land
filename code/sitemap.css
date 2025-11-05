@@ -1,0 +1,45 @@
+body {
+    background-image: url('BgImages/siteMap.jpg');
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    display: block;
+    margin: 50px auto; /* Add top bottom margin */
+    border: none; /* Remove default border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+svg:hover {
+    box-shadow: 0 5px 15px rgba(33, 136, 56, 0.5); /* Green shadow on hover */
+    border-radius: 10px;
+}
+
+rect {
+    fill: #2baf48; 
+    stroke: #ffffff; /* White border */
+    stroke-width: 2;   /* Thicker border */
+    stroke-linecap: round; /* Rounded corners */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Add shadow */
+}
+
+rect:hover {
+    fill: #1d6830; /* Darker green on hover */
+    cursor: pointer;
+}
+
+text {
+    fill: white; /* White text color */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+line {
+    stroke: #218838; /* Line colors */
+    stroke-width: 2;
+}

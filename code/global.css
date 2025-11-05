@@ -1,0 +1,108 @@
+/*Navbar*/
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: flex-end; /* Align the navbar items to the right */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px;
+    top: 0;
+    left: 0; /* Ensure it's aligned to the top-left */
+    width: 100%; /* Full width of the page */
+    height: 100px;
+    background: rgba(40, 167, 69, 0.8);
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensures padding is inside the width */
+    backdrop-filter: blur(3px); /* Adds a slight blur effect */
+    z-index: 1500; /* Keep navbar above content */
+  }
+  
+  nav a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;  /* Increase the font size to make navbar topics larger */
+    font-weight: 700;
+    color: rgb(254, 252, 252);
+    text-decoration: none;
+    padding: 10px 23px;
+    border: 2px solid transparent; /* Add border for the square effect */
+    border-radius: 8px; /* Rounded corners for the small square */
+    font-family: 'Arial', sans-serif; /* New font style */
+    transition: border-color 0.3s ease; /* Smooth transition for border */
+  }
+  
+  nav a:hover {
+    border-color: white; /* Change border color when hovered */
+  }
+  
+  nav span {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0; /* Initially width is 0 */
+    height: 3px;
+    background: white;
+    border-radius: 8px;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+  
+  nav::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #28a745;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  
+  /* Styling for the logo */
+  .navbar-logo {
+    position: absolute; /* Positions the logo relative to the nearest positioned ancestor (body in this case) */
+    top: 0; /* Aligns the logo to the top of the page */
+    left: 0; /* Aligns the logo to the left of the page */
+    height: 100px; /* Increased the size of the logo */
+    width: auto; /* Keeps the logo's aspect ratio */
+  }
+  
+ /* Footer */
+.Team {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 20px 35px;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2); /* Shadow above footer */
+    text-align: center;
+}
+
+/* Footer list */
+.Team ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centered links */
+  gap: 130px; /* Increased space between names */
+}
+
+
+/* Footer links */
+.Team li {
+    display: inline-block;
+}
+
+.Team a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.Team a:hover {
+    background: #517e55;
+    border-radius: 50px;
+}

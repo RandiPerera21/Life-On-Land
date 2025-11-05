@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision</title>
+    <link rel="stylesheet" href="Vision.css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;700&display=swap');
+
+/* General Page Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('BgImages/Mission&Vision.jpg') no-repeat center center/cover; /* Updated background */
+    position: relative;
+}
+
+/* Background Overlay for Readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1;
+}
+
+/* Our Mission Title */
+.Our-Vision {
+    font-size: 34px;
+    font-family: 'Fredoka One', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)); /* Glossy effect */
+    border: 3px solid rgba(255, 255, 255, 0.4); /* Transparent border */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Mission Statement Styling */
+.Vision {
+    font-size: 26px;
+    font-style: oblique;
+    color: #FAE3C6;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1); /* Soft glass effect */
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 1.6;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+    border: 3px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+/* Gradient Border Effect with Brown Tones */
+.Vision::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+    background: linear-gradient(45deg, #3e2a47, #6a4e23, #8e6c43, #3e2a47); /* Shades of brown */
+    border-radius: 18px;
+    animation: borderAnimation 6s infinite linear;
+}
+
+/* Border Animation (Subtle Brown Gradient Animation) */
+@keyframes borderAnimation {
+    0% {
+        background: linear-gradient(45deg, #3e2a47, #6a4e23, #8e6c43, #3e2a47); /* Initial brown gradient */
+    }
+    100% {
+        background: linear-gradient(45deg, #3e2a47, #6a4e23, #8e6c43, #3e2a47); /* Back to initial brown gradient */
+    }
+}
+
+
+/* Slogan Styling */
+.Slogan {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Matches the modern style */
+    font-weight: 600;
+    text-align: center;
+    color: #ffcc00; /* Bright color for attention */
+    margin-top: 20px;
+    
+}
+
+/* Positioning the back button */
+.back-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+
+/* Styling the back button */
+.back-arrow a {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FAE3C6;
+    background: linear-gradient(135deg, #9C6B3D, #6E4B28);
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styling the arrow */
+.back-arrow .arrow {
+    font-size: 22px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.back-arrow a:hover {
+    background: linear-gradient(135deg, #6E4B28, #4A331A);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Moving the arrow on hover */
+.back-arrow a:hover .arrow {
+    transform: translateX(-5px);
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="Our-Vision">
+        Our Vision !
+    </div>
+
+    <div class="Vision">
+        "A thriving planet where terrestrial ecosystems <br>
+        flourish, biodiversity thrives, and humanity <br>
+        lives in harmony with nature.<br> 
+        We envision a future where forests are<br>
+        protected, deserts are revitalized, and every  <br> 
+        patch of landsustains life, ensuring a healthy, <br>
+        resilient Earth for generations to come."
+    </div>
+    <div class="Slogan">
+        "Love the Land, Take a Stand – Together We Can!"
+    </div>
+    <div class="back-arrow">
+        <a href="Home.html">
+        <span class="arrow">&#8592;</span>Home
+    </a>
+    </div>
+</body>
+</html>
